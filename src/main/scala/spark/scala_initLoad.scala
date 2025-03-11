@@ -3,7 +3,7 @@ package spark
 import org.apache.spark.sql.{SparkSession, DataFrame}
 import org.apache.spark.sql.functions._
 
-object initload_tfl {
+object initload_tfl1 {
   def main(args: Array[String]): Unit = {
     // Create Spark session
     val spark = SparkSession.builder()
@@ -35,7 +35,7 @@ object initload_tfl {
     // Write DataFrame to Hive table
     df_transformed.write
       .mode("overwrite")  // Use append for adding data without overwriting
-      .saveAsTable("big_datajan2025.scala_TFL_UNDERGROUNDData")  // Specify your database and table name
+      .saveAsTable("big_datajan2025.scala_TFL_UNDERGROUNDData1")  // Specify your database and table name
 
     // Stop SparkSession
     spark.stop()
